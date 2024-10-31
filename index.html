@@ -36,7 +36,7 @@
     <div class="wrap-contact100">
       <form id="google-form" class="contact100-form validate-form">
         <span class="contact100-form-title">
-          餐後回饋_Test_010
+          餐後回饋_Test_011
         </span>
 
         <label class="label-input100" for="uid">Uid *</label>
@@ -164,7 +164,7 @@
       //在這裡我們要先擋掉form默認事件
       e.preventDefault();
 
-      if ($('#name').val() && $('#score').val()) {//需要先確認必填欄位是否填寫
+      if ($('#uid').val() && $('#name').val() && $('#score').val()) {//需要先確認必填欄位是否填寫
         $.ajax({
           // url為Google Form按下submit的aciotn
           url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSflQC8LCB1ce_reXie5WGqfGYhJzQevXtL9Y0_SA617LYo39A/formResponse",
