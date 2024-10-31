@@ -35,7 +35,7 @@
     <div class="wrap-contact100">
       <form id="google-form" class="contact100-form validate-form">
         <span class="contact100-form-title">
-          餐後回饋_Test_041
+          餐後回饋_Test_042
         </span>
         
         <div class="w540"><img src="https://picsum.photos/540/480" style="width: 100%" alt="隨機圖片" class="center"></div>
@@ -64,8 +64,8 @@
           <span class="focus-input100"></span>
         </div>
         
-        <label class="label-input100" for="score">評分(三個選項) *</label>
-        <div class="wrap-input100 validate-input" data-validate="請選擇">
+        <label class="label-input100" for="score">評分(下拉式三個選項) *</label>
+        <div class="wrap-input100 validate-input" data-validate="請核選">
           <select class="form-control" id="score" style="border: 0px;">
             <option>棄票</option>    
             <option>不同意</option>
@@ -73,6 +73,13 @@
           </select>
         </div>
 
+        <label class="label-input100" for="mcq1">選擇題 ( 單選 ) *</label>
+        <div class="wrap-input100 validate-input" data-validate="請選擇">
+          <label><input type="radio" name="mcq1" value="email" checked required >同意</label> 
+          <label><input type="radio" name="mcq1" value="phone" >不同意</label>
+          <label><input type="radio" name="mcq1" value="mail" >棄票</label>
+        </div>
+        
         <div class="container-contact100-form-btn">
           <button class="contact100-form-btn">
             送出
@@ -160,7 +167,7 @@
     $('#google-form').submit(function (e) {
       //在這裡我們要先擋掉form默認事件
       e.preventDefault();
-      if ($('#uid').val() && $('#name').val() && $('#score').val()) {//需要先確認必填欄位是否填寫
+      if ($('#uid').val() && $('#name').val() && $('#score').val() && $('#mcq1').val()) {//需要先確認必填欄位是否填寫
         $.ajax({
           // url為Google Form按下submit的aciotn
           url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSflQC8LCB1ce_reXie5WGqfGYhJzQevXtL9Y0_SA617LYo39A/formResponse",
@@ -170,7 +177,8 @@
             "entry.1487138390": $('#name').val(),
             "entry.498756846": $('#email').val(),
             "entry.318662779": $('#message').val(),
-            "entry.982130188": $('#score').val()          
+            "entry.982130188": $('#score').val(),
+            "entry.982130188": $('#mcq1').val()
           },
           type: "POST", //因為是要進行insert的動作，故事用POST
           dataType: "JSONP",
@@ -181,6 +189,7 @@
             $('#email').val('')
             $('#message').val('')    
             $('#score').val('')
+            $('#mcq1').val('')
             //最後跳轉到感謝的頁面
             window.location.replace("thank.html");
           }
