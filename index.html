@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>餐後回饋_Test_001</title>
+  <title>餐後回饋_Test_002</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--===============================================================================================-->
@@ -161,13 +161,13 @@
       if ($('#name').val() && $('#score').val()) {//需要先確認必填欄位是否填寫
         $.ajax({
           // url為Google Form按下submit的aciotn
-          url: "https://docs.google.com/forms/d/e/1FAIpQLSeijRuLDQE62gbapDYgd_3pbmg7GyWY1CWPVeaEK-TiLDKzPw/formResponse",
+          url: "https://docs.google.com/forms/d/e/1FAIpQLSflQC8LCB1ce_reXie5WGqfGYhJzQevXtL9Y0_SA617LYo39A/formResponse",
           crossDomain: true,//解決跨網域CORS的問題
           data: {// entry.xxxxx 這些需要填寫您表單裡面的值，與其相互對應
-            "entry.2040133429": $('#name').val(),
-            "entry.304089069": $('#email').val(),
-            "entry.207113062": $('#score').val(),
-            "entry.1310220291": $('#message').val()
+            "entry.1487138390": $('#name').val(),
+            "entry.564286084": $('#email').val(),
+            "entry.206543523": $('#score').val(),
+            "entry.1438225894": $('#message').val()
           },
           type: "POST", //因為是要進行insert的動作，故事用POST
           dataType: "JSONP",
@@ -187,3 +187,5 @@
 </body>
 
 </html>
+
+<meta itemprop="embedURL" content="https://docs.google.com/forms/d/e/1FAIpQLSflQC8LCB1ce_reXie5WGqfGYhJzQevXtL9Y0_SA617LYo39A/viewform?embedded=true&amp;usp=embed_googleplus">
