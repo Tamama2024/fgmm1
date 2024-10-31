@@ -36,7 +36,7 @@
     <div class="wrap-contact100">
       <form id="google-form" class="contact100-form validate-form">
         <span class="contact100-form-title">
-          餐後回饋_Test_008
+          餐後回饋_Test_009
         </span>
 
         <label class="label-input100" for="uid">Uid *</label>
@@ -170,6 +170,7 @@
           url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSflQC8LCB1ce_reXie5WGqfGYhJzQevXtL9Y0_SA617LYo39A/formResponse",
           crossDomain: true,//解決跨網域CORS的問題
           data: {// entry.xxxxx 這些需要填寫您表單裡面的值，與其相互對應
+            "entry.642821324": $('#uid').val(),
             "entry.1487138390": $('#name').val(),
             "entry.498756846": $('#email').val(),
             "entry.982130188": $('#score').val(),
@@ -188,6 +189,7 @@
           dataType: "JSONP",
           complete: function () {
             //完成後把這些欄位清空
+            $('#uid').val('')
             $('#name').val('')
             $('#email').val('')
             $('#score').val('')
