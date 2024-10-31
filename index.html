@@ -36,7 +36,7 @@
     <div class="wrap-contact100">
       <form id="google-form" class="contact100-form validate-form">
         <span class="contact100-form-title">
-          餐後回饋_Test_004
+          餐後回饋_Test_005
         </span>
 
         <label class="label-input100" for="first-name">姓名 *</label>
@@ -161,7 +161,7 @@
       if ($('#name').val() && $('#score').val()) {//需要先確認必填欄位是否填寫
         $.ajax({
           // url為Google Form按下submit的aciotn
-          url: "https://docs.google.com/forms/d/e/1FAIpQLSflQC8LCB1ce_reXie5WGqfGYhJzQevXtL9Y0_SA617LYo39A/formResponse",
+          url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSflQC8LCB1ce_reXie5WGqfGYhJzQevXtL9Y0_SA617LYo39A/formResponse",
           crossDomain: true,//解決跨網域CORS的問題
           data: {// entry.xxxxx 這些需要填寫您表單裡面的值，與其相互對應
             "entry.1487138390": $('#name').val(),
