@@ -36,14 +36,14 @@
     <div class="wrap-contact100">
       <form id="google-form" class="contact100-form validate-form">
         <span class="contact100-form-title">
-          餐後回饋_Test_032
+          餐後回饋_Test_033
         </span>
 
-      <div class="w540"><img src="https://picsum.photos/540/960" style="width: 100%" alt="主視覺" class="center"></div>   
+      <div class="w540"><img src="https://picsum.photos/540/960" style="width: 100%" alt="隨機圖片" class="center"></div>   
 
         <label class="label-input100" for="uid">Uid *</label>
         <div class="wrap-input100 validate-input" data-validate="Uid為必填">
-          <input id="uid" class="input100" type="text" placeholder="無" disabled="disabled">
+          <input id="uid" class="input100" type="text" placeholder="請勿修改" disabled="disabled">
           <span class="focus-input100"></span>
         </div>
         
@@ -59,21 +59,19 @@
           <span class="focus-input100"></span>
         </div>
 
-        <label class="label-input100" for="score">評分(最高五分) *</label>
-        <div class="wrap-input100 validate-input" data-validate="煩請評分">
-          <select class="form-control" id="score" style="border: 0px;">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-
         <label class="label-input100" for="message">您的建議</label>
         <div class="wrap-input100" data-validate="Message is required">
           <textarea id="message" class="input100" placeholder="Write us a message"></textarea>
           <span class="focus-input100"></span>
+        </div>
+        
+        <label class="label-input100" for="score">評分(三個選項) *</label>
+        <div class="wrap-input100 validate-input" data-validate="請選擇">
+          <select class="form-control" id="score" style="border: 0px;">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
         </div>
 
         <div class="container-contact100-form-btn">
@@ -175,17 +173,8 @@
             "entry.642821324": $('#uid').val(),
             "entry.1487138390": $('#name').val(),
             "entry.498756846": $('#email').val(),
-            "entry.982130188": $('#score').val(),
             "entry.318662779": $('#message').val()
-
-
-              //<input type="hidden" name="entry.498756846" value="郵件">
-              //<input type="hidden" name="entry.1487138390" value="小明">
-              //<input type="hidden" name="entry.318662779" value="乖">
-              //<input type="hidden" name="entry.982130188" value="5">
-              //<input type="hidden" name="entry.642821324" value="123">
-            
-          
+            "entry.982130188": $('#score').val(),          
           },
           type: "POST", //因為是要進行insert的動作，故事用POST
           dataType: "JSONP",
@@ -194,8 +183,8 @@
             $('#uid').val('')
             $('#name').val('')
             $('#email').val('')
+            $('#message').val('')    
             $('#score').val('')
-            $('#message').val('')
             //最後跳轉到感謝的頁面
             window.location.replace("thank.html");
           }
