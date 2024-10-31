@@ -30,17 +30,15 @@
 </head>
 
 <body>
-
   <div class="container-contact100">    
+    <div class="w540"><img src="https://picsum.photos/540/480" style="width: 100%" alt="隨機圖片" class="center"></div>   
     
     <div class="wrap-contact100">
       <form id="google-form" class="contact100-form validate-form">
         <span class="contact100-form-title">
-          餐後回饋_Test_037
+          餐後回饋_Test_038
         </span>
-
-      <div class="w540"><img src="https://picsum.photos/540/960" style="width: 100%" alt="隨機圖片" class="center"></div>   
-
+        
         <label class="label-input100" for="uid">Uid *</label>
         <div class="wrap-input100 validate-input" data-validate="Uid為必填">
           <input id="uid" class="input100" type="text" placeholder="請勿修改">
@@ -133,8 +131,6 @@
     </div>
   </div>
 
-
-
   <div id="dropDownSelect1"></div>
 
   <!--===============================================================================================-->
@@ -163,7 +159,6 @@
     $('#google-form').submit(function (e) {
       //在這裡我們要先擋掉form默認事件
       e.preventDefault();
-
       if ($('#uid').val() && $('#name').val() && $('#score').val()) {//需要先確認必填欄位是否填寫
         $.ajax({
           // url為Google Form按下submit的aciotn
