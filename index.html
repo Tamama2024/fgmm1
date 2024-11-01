@@ -35,7 +35,7 @@
     <div class="wrap-contact100">
       <form id="google-form" class="contact100-form validate-form">
         <span class="contact100-form-title">
-          餐後回饋_Test_112
+          餐後回饋_Test_113
         </span>
         
         <div class="w540"><img src="https://picsum.photos/540/480" style="width: 100%" alt="隨機圖片" class="center"></div>
@@ -76,14 +76,9 @@
         <!--Radio Button單選-->
         <label class="label-input100" for="mcq1">議題 (二)  (單選式選擇題) *</label>
         <div class="wrap-input100">
-            <input class="input100" type="radio" name="mcq1" id="同意" value="同意">
-            <label class="input100" for="同意">A同意</label>
-
-            <input class="input100" type="radio" name="mcq1" id="不同意" value="不同意">
-            <label class="input100" for="不同意">B不同意</label>
-          
-            <input class="input100" type="radio" name="mcq1" id="棄票" value="棄票">
-            <label class="input100" for="棄票">C棄票</label>       
+             <input type="radio" id="pp1" name="mcq1" value="同意"><label for="同意">A同意</label>
+             <input type="radio" id="pp2" name="mcq1" value="不同意"><label for="不同意">B不同意</label>
+             <input type="radio" id="pp3" name="mcq1" value="棄票"><label for="棄票">C棄票</label>>
         </div>
         
         <!--Submisson Button 送出-->
@@ -185,10 +180,7 @@
             "entry.498756846": $('#email').val(),
             "entry.318662779": $('#message').val(),
             "entry.982130188": $('#score').val(),
-            "entry.1436740018": $('#mcq1').val(),
-            "entry.1436740018": $('#pp1').val(), 
-            "entry.1436740018": $('#pp2').val(), 
-            "entry.1436740018": $('#pp3').val()
+            "entry.1436740018": $('#mcq1').val()
           },
           type: "POST", //因為是要進行insert的動作，故事用POST
           dataType: "JSONP",
