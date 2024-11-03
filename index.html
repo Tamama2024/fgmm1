@@ -26,43 +26,7 @@
   <!--===============================================================================================-->
   <link rel="stylesheet" type="text/css" href="css/util.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
-  <!--===============================================================================================-->
-
-    <meta charset="UTF-8" />
-    <script type="text/javascript">
-        function showHint(str) {
-            var xmlhttp;
-            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp = new XMLHttpRequest();
-            }
-            else {// code for IE6, IE5
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            xmlhttp.onreadystatechange = function () {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    var result = xmlhttp.responseText;
-                    var obj = JSON.parse(result);//解析json字串為json物件形式
-                    var html = '<table border=1 width=100%>';//
-                    for (var i = 0; i < obj.length; i++) {//
-                        html += '<tr>';//
-                        for (j = 0; j < obj[i].data.length; j++) {
-                            html += '<td>' + obj[i].data[j] + '</td>';
-                        }
-                        html += '</tr>';
-                    }
-                    html += "</table>";
-
-                    document.getElementById("order_status").innerHTML = html;
-                    if (obj.length == 1) //只有一筆代表查不到資料
-                        alert('查無資料');
-                }
-            }
-              var url = "https://script.google.com/macros/s/AKfycbwyY7oLpoZ4lbcIwIWniLZ8U_pY8e7YBK9fakeszgR_77S2u1SV/exec";
-            xmlhttp.open("get", url + "?uid=" + encodeURIComponent(str), true);
-            xmlhttp.send();
-        }
-    </script>
-  
+  <!--===============================================================================================-->  
 </head>
 
 <body>
@@ -70,7 +34,7 @@
     <div class="wrap-contact100">
       <form id="google-form" class="contact100-form validate-form">
         <span class="contact100-form-title">
-          問卷測試_Test_186
+          問卷測試_Test_187
         </span>
         
         <div class="w540"><img src="https://picsum.photos/540/480" style="width: 100%" alt="隨機圖片" class="center"></div>
@@ -165,12 +129,6 @@
             <option value="棄票">棄票</option>
           </select>
         </div>
-
-        <!--查詢系統--> 
-        輸入購買者身分證號：<input type="text" id="uid" /></br>
-        <input type="button" name="inq" value="查詢" onclick="showHint(uid.value);"></br>
-        <span id="order_status"></span>
-
         
         <!--Submisson Button 送出-->
         <div class="container-contact100-form-btn">
