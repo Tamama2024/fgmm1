@@ -35,7 +35,7 @@
     <div class="wrap-contact100">
       <form id="google-form" class="contact100-form validate-form">
         <span class="contact100-form-title">
-          問卷測試_Test_156
+          問卷測試_Test_157
         </span>
         
         <div class="w540"><img src="https://picsum.photos/540/480" style="width: 100%" alt="隨機圖片" class="center"></div>
@@ -183,6 +183,23 @@
 
   <!--===============================================================================================-->
   <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
+    $('#google-form').submit(function (e) {
+
+        // 性別
+        var sex = function() {
+          var v;
+          $('[name="demo_radio"]').each(function() {
+            if($(this).prop('checked') === true) v = $(this).val();
+          });
+          return v;
+        };
+        // post
+        var data = {
+          'entry.1724544777': sex(),
+        };        
+    };  
+  
   <!--===============================================================================================-->
   <script src="vendor/animsition/js/animsition.min.js"></script>
   <!--===============================================================================================-->
@@ -204,20 +221,7 @@
   <!--===============================================================================================-->
   <script src="js/main.js"></script>
   <script>
-    $('#google-form').submit(function (e) {
 
-        // 性別
-        var sex = function() {
-          var v;
-          $('[name="demo_radio"]').each(function() {
-            if($(this).prop('checked') === true) v = $(this).val();
-          });
-          return v;
-        };
-        // post
-        var data = {
-          'entry.1724544777': sex(),
-        };        
       
       //在這裡我們要先擋掉form默認事件
       e.preventDefault();
