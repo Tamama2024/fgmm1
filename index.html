@@ -35,7 +35,7 @@
     <div class="wrap-contact100">
       <form id="google-form" class="contact100-form validate-form">
         <span class="contact100-form-title">
-          問卷測試_Test_172
+          問卷測試_Test_173
         </span>
         
         <div class="w540"><img src="https://picsum.photos/540/480" style="width: 100%" alt="隨機圖片" class="center"></div>
@@ -75,19 +75,19 @@
         </div>
         
         <!--Radio Button單選-->
-        <label class="label-input100">議題 (二)  (單選式選擇題) *</label>
+        <label class="label-input100" for="mcquestion>議題 (二)  (單選式選擇題) *</label>
         <div class="wrap-input100">
-          <div>  
-            <input type="radio" id="mcquestion1" name="radio_mcq1" value="A">
-            <label for="mcquestion1">A同意</label>
+          <div class="from-check from-check-inline">  
+            <input id="mcquestion1" type="radio" name="mcquestion" class="from-check-input" value="a" required>
+            <label for="a" class="from-check-label">A同意</label>
           </div>
-          <div>  
-            <input type="radio" id="mcquestion1" name="radio_mcq1" value="B">
-            <label for="mcquestion1">B不同意</label>
+          <div class="from-check from-check-inline">  
+            <input id="mcquestion2" type="radio" name="mcquestion"  class="from-check-input" value="b" required>
+            <label for="b" class="from-check-label">B不同意</label>
           </div>
-          <div>  
-            <input type="radio" id="mcquestion1" name="radio_mcq1" value="C">
-            <label for="mcquestion1">C棄票</label>
+          <div class="from-check from-check-inline">  
+            <input id="mcquestion3" type="radio" name="mcquestion"  class="from-check-input" value="c" required>
+            <label for="c" class="from-check-label">C棄票</label>
           </div>
         </div>
 
@@ -97,20 +97,20 @@
         <div class="wrap-input100">
               <!-- 男性 -->
               <div class="four columns">
-                <input type="radio" id="mcquestion2" name="radio_mcq2" value="male" checked="">
-                <label for="mcquestion2">男性</label>
+                <input type="radio" id="radio1_mcq1" name="radio1_mcq" value="male" checked="">
+                <label for="radio1_mcq1">男性</label>
               </div>
 
               <!-- 女性 -->
               <div class="four columns">
-                <input type="radio" id="mcquestion2" name="radio_mcq2" value="female">
-                <label for="mcquestion2">女性</label>
+                <input type="radio" id="mcquestion2" name="radio1_mcq" value="female">
+                <label for="radio1_mcq2">女性</label>
               </div>
 
               <!-- 法人 -->
               <div class="four columns">
-                <input type="radio" id="mcquestion2" name="radio_mcq2" value="legal">
-                <label for="mcquestion2">法人</label>
+                <input type="radio" id="mcquestion2" name="radio1_mcq" value="legal">
+                <label for="radio1_mcq3">法人</label>
               </div>
             </div>
           </div>
@@ -219,8 +219,8 @@
             "entry.498756846": $('#email').val(),
             "entry.318662779": $('#message').val(),
             "entry.982130188": $('#score').val(),
-            "entry.1436740018": $('#mcquestion1').val(),
-            "entry.1724544777": $('#mcquestion2').val()
+            "entry.1436740018": $('#mcquestion').val(),
+            "entry.1724544777": $('#radio1_mcq').val()
           },
           type: "POST", //因為是要進行insert的動作，故事用POST
           dataType: "JSONP",
@@ -231,8 +231,8 @@
             $('#email').val('')
             $('#message').val('')    
             $('#score').val('')
-            $('#mcquestion1').val('')
-            $('#mcquestion2').val('')         
+            $('#mcquestion').val('')
+            $('#radio1_mcq').val('')         
             //最後跳轉到感謝的頁面
             window.location.replace("thank.html");
           }
