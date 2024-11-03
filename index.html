@@ -74,6 +74,23 @@
         </span>
         
         <div class="w540"><img src="https://picsum.photos/540/480" style="width: 100%" alt="隨機圖片" class="center"></div>
+
+        <div class="form-group">
+          <label for="main_id">請輸入 ID（0101 - 0112）</label>
+          <input class="form-control" id="main_id" type="number" v-model="id" @input="limitIdLen(id)"/>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">驗證碼</label>
+            <input class="form-control" id="phone" type="tel" v-model="person.phone" disabled="disabled"/>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">投票單編號</label>
+          <input class="form-control" id="phone" type="tel" v-model="person.phone" disabled="disabled"/>
+           <path fill="none" d="M0 0h24v24H0z"></path>
+           <path fill="#00A7E5" d="M18.586 5H14V3h8v8h-2V6.414l-3.537 3.537a7.5 7.5 0 1 1-1.414-1.414L18.586 5z"></path>
+        </div>
         
         <label class="label-input100" for="uid">Uid *</label>
         <div class="wrap-input100 validate-input" data-validate="Uid為必填">
