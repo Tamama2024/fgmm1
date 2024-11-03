@@ -14,16 +14,13 @@ const FormAutoFill = new Vue({
     person: {},
 
     // Google Form 的 action URL
-    formAction: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSeNBnd-yVJ7_-tMq5xaQrvt0j18UtabCFBTM0Eu2O3ivDecuQ/formResponse',
+    formAction: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSflQC8LCB1ce_reXie5WGqfGYhJzQevXtL9Y0_SA617LYo39A/formResponse',
     
     // Google Form 各個 input 的 name
     input: {
       id: 'entry.1815052017',
       name: 'entry.1543576845',
-      gender: 'entry.892230025',
       phone: 'entry.1003128242',
-      site: 'entry.260985931',
-      msg: 'entry.1782841550'
     },
 
     // loading 效果要不要顯示
@@ -40,7 +37,7 @@ const FormAutoFill = new Vue({
     submit() {
       // 再一次判斷是不是可以送出資料
       if(this.person.name !== undefined) {
-        let params = `${this.input.id}=${this.person.id}&${this.input.name}=${this.person.name}&${this.input.gender}=${this.person.gender}&${this.input.phone}=${this.person.phone}&${this.input.site}=${this.person.site}&${this.input.msg}=${this.person.message || '無'}`;
+        let params = `${this.input.id}=${this.person.id}&${this.input.name}=${this.person.name}&${this.input.phone}=${this.person.phone} || '無'}`;
         fetch(this.formAction + '?' + params, {
           method: 'POST'
         }).catch(err => {
