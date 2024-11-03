@@ -30,12 +30,11 @@
 </head>
 
 <body>
-  
   <div class="container-contact100">       
     <div class="wrap-contact100">
       <form id="google-form" class="contact100-form validate-form">
         <span class="contact100-form-title">
-          問卷測試_Test_179
+          問卷測試_Test_180
         </span>
         
         <div class="w540"><img src="https://picsum.photos/540/480" style="width: 100%" alt="隨機圖片" class="center"></div>
@@ -64,9 +63,9 @@
           <span class="focus-input100"></span>
         </div>
         
-        <label class="label-input100" for="score">議題 (一) (下拉式三個選項) *</label>
+        <label class="label-input100" for="score1">議題 (一) (下拉式三個選項) *</label>
         <div class="wrap-input100 validate-input" data-validate="請核選">
-          <select class="form-control" id="score" style="border: 0px;">
+          <select class="form-control" id="score1" style="border: 0px;">
             <option value="0" selected disabled>請選擇</option>
             <option value="同意">同意</option>
             <option value="不同意">不同意</option>
@@ -74,34 +73,26 @@
           </select>
         </div>
         
-        <!--Radio Button單選-->
-        <label class="label-input100" for="mcquestion">議題 (二) (google表單-選擇題_單選式) *</label>
-        <div class="wrap-input100>
-          <div>  
-            <input id="mcquestion" type="radio" name="mcquestion" value="A同意">
-            <label for="A同意">A同意</label>
-            <input id="mcquestion" type="radio" name="mcquestion" value="B不同意">
-            <label for="B不同意">B不同意</label>    
-            <input id="mcquestion" type="radio" name="mcquestion" value="C棄票">
-            <label for="C棄票">C棄票</label>
-            <option value="同意"></option>
-            <option value="不同意"></option>
-            <option value="棄票"></option>
-          </div>
+        <label class="label-input100" for="score2">議題 (二) (下拉式三個選項) *</label>
+        <div class="wrap-input100 validate-input" data-validate="請核選">
+          <select class="form-control" id="score2" style="border: 0px;">
+            <option value="0" selected disabled>請選擇</option>
+            <option value="同意">同意</option>
+            <option value="不同意">不同意</option>
+            <option value="棄票">棄票</option>
+          </select>
         </div>
 
-        
-        <label class="label-input100" for="radio1_mcq">議題 (三) ( google表單-簡答  ) *</label>
-        <div class="wrap-input100>
-                <input type="radio" id="radio1_mcq1" name="radio1_mcq" value="male" checked="">
-                <label for="radio1_mcq1">男性</label>
-                <input type="radio" id="radio1_mcq2" name="radio1_mcq" value="female">
-                <label for="radio1_mcq2">女性</label>
-                <input type="radio" id="radio1_mcq3" name="radio1_mcq" value="legal">
-                <label for="radio1_mcq3">法人</label>
+        <label class="label-input100" for="score3">議題 (三) (下拉式三個選項) *</label>
+        <div class="wrap-input100 validate-input" data-validate="請核選">
+          <select class="form-control" id="score3" style="border: 0px;">
+            <option value="0" selected disabled>請選擇</option>
+            <option value="同意">同意</option>
+            <option value="不同意">不同意</option>
+            <option value="棄票">棄票</option>
+          </select>
         </div>
 
-        
         <!--Submisson Button 送出-->
         <div class="container-contact100-form-btn">
           <button class="contact100-form-btn">
@@ -202,9 +193,9 @@
             "entry.1487138390": $('#name').val(),
             "entry.498756846": $('#email').val(),
             "entry.318662779": $('#message').val(),
-            "entry.982130188": $('#score').val(),
-            "entry.1436740018": $('#mcquestion').val(),
-            "entry.1724544777": $('#radio1_mcq').val()
+            "entry.982130188": $('#score1').val(),
+            "entry.1436740018": $('#score2').val(),
+            "entry.1724544777": $('#score3').val()
           },
           type: "POST", //因為是要進行insert的動作，故事用POST
           dataType: "JSONP",
@@ -214,9 +205,9 @@
             $('#name').val('')
             $('#email').val('')
             $('#message').val('')    
-            $('#score').val('')
-            $('#mcquestion').val('')
-            $('#radio1_mcq').val('')         
+            $('#score1').val('')
+            $('#score2').val('')
+            $('#score3').val('')         
             //最後跳轉到感謝的頁面
             window.location.replace("thank.html");
           }
