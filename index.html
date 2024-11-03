@@ -35,7 +35,7 @@
     <div class="wrap-contact100">
       <form id="google-form" class="contact100-form validate-form">
         <span class="contact100-form-title">
-          問卷測試_Test_160
+          問卷測試_Test_161
         </span>
         
         <div class="w540"><img src="https://picsum.photos/540/480" style="width: 100%" alt="隨機圖片" class="center"></div>
@@ -185,6 +185,8 @@
   <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
   
   <script>
+    $(function() {
+      $('#submit').on('click', function() {
         // 性別
         var sex = function() {
           var v;
@@ -196,7 +198,9 @@
         // post
         var data = {
           'entry.1724544777': sex(),
-        };         
+        };  
+      };  
+   };  
   </script>
   
   <!--===============================================================================================-->
